@@ -19,7 +19,7 @@ public class HibernateUtil {
 		String methodName = HibernateUtil.class.getSimpleName() + ".buildSessionFactory()";
 		// configure settings from hibernate.cfg.xml
 		final StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-                                                          		.configure("C:\\Users\\Arturo\\eclipse-workspace\\Hibernate\\src\\resources\\hibernate.cfg.xml").build();
+                                                          		.configure("hibernate.cfg.xml").build();
 
 		try {
 			Metadata metadata = new MetadataSources(standardRegistry).getMetadataBuilder().build();

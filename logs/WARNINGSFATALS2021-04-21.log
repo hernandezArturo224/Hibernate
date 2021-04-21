@@ -1,0 +1,4 @@
+[2021-04-21 13:26:30] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 13:34:06] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 13:35:01] [ WARN ] [deprecation:81] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2021-04-21 13:35:02] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)

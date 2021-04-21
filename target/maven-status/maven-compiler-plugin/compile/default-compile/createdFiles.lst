@@ -1,5 +1,6 @@
-log\logs\UsoLogger.class
 utilidades\HibernateUtil.class
 daos\EmpleadoDAO.class
-Hibernate\Hibernate\App.class
 modelos\Empleados.class
+log\logs\UsoLogger.class
+Hibernate\Hibernate\App.class
+modelos\Departamentos.class

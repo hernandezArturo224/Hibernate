@@ -38,7 +38,7 @@
    		<column name="puesto"/>
   	</property>
   	
-  	<property generated="never" lazy="false" name="cod_departamento" type="java.lang.String">
+  	<property generated="never" lazy="false" name="cod_departamento" type="int">
    		<column name="cod_departamento"/>
   	</property>
 

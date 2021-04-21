@@ -4,7 +4,10 @@ import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import modelos.*;
+import java.util.*;
 import utilidades.*;
+import daos.*;
 
 /**
  * Hello world!
@@ -25,5 +28,7 @@ public class App
         log.info("Programa iniciado");
         
         Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        List<Empleados> empleados = EmpleadoDAO.getAllEmployees(session);
     }
 }
