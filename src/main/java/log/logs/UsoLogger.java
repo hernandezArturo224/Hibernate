@@ -13,7 +13,7 @@ public class UsoLogger {
 	public static void createLogguer() {
 		 ClassLoader loader = Thread.currentThread().getContextClassLoader();
 		 //URL url = loader.getResource("log4j.properties");
-		 String url = "C:\\Users\\Arturo\\eclipse-workspace\\Hibernate\\src\\resources\\log4j.properties";
+		 String url = "C:\\Users\\Formacion\\eclipse-workspace\\Hibernate\\src\\main\\resources\\log4j.properties";
 		 
 		 PropertyConfigurator.configure(url);
 	}

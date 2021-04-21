@@ -29,6 +29,8 @@ public class App
         
         Session session = HibernateUtil.getSessionFactory().openSession();
         
-        List<Empleados> empleados = EmpleadoDAO.getAllEmployees(session);
+        //List<Empleados> empleados = EmpleadoDAO.getAllEmployees(session);
+        
+        //System.out.println(empleados.get(0).toString());
     }
 }
