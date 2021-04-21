@@ -2,6 +2,11 @@ package modelos;
 
 import java.io.Serializable;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "empleado")
 public class Empleados implements Serializable{
 	
 	private int codigo;
