@@ -36,5 +36,13 @@ public class EmpleadoDAO {
 		s.delete(empleado);
 		tx.commit();
 	}
+	
+	public static void updateNameFromId(int id, String nuevoNombre, Session s) {
+		 List<Empleados> empleados = getAllEmployees(s);
+		Transaction tx = s.beginTransaction();
+        Empleados empl = empleados.stream().filter(x -> x.getCodigo() == id).findFirst().orElse(null);
+        empl.setNombre(nuevoNombre);
+        tx.commit();
+	}
 
 }

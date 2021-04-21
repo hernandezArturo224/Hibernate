@@ -30,15 +30,17 @@ public class App
         
         Session session = HibernateUtil.getSessionFactory().openSession();
         
-        //List<Empleados> empleados = EmpleadoDAO.getAllEmployees(session);
-        
         //System.out.println(empleados.get(0).toString());
         
         //Empleados em = EmpleadoDAO.getEmployeeFromId(session, 12);
         
         //System.out.println(em.toString());
-        Empleados empl = new Empleados(8,"Arturo","Hernandez","Nuñez","Zamora",'d',"C/Plaza","956321596","JEFAZO",9);
+        //Empleados empl = new Empleados(8,"Arturo","Hernandez","Nuñez","Zamora",'d',"C/Plaza","956321596","JEFAZO",9);
         //EmpleadoDAO.insertEmployee(empl, session);
-        EmpleadoDAO.deleteEmployee(empl, session);
+        //EmpleadoDAO.deleteEmployee(empl, session);
+        
+        EmpleadoDAO.updateNameFromId(1, "Zacarias", session);
+        
+       
     }
 }
