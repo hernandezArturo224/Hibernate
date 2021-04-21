@@ -9,15 +9,37 @@ import javax.persistence.*;
 @Table(name = "empleado")
 public class Empleados implements Serializable{
 	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	@Column(name = "codigo")
 	private int codigo;
+	
+	@Column(name = "nombre", nullable = false)
 	private String nombre;
+	
+	@Column(name = "apellido1", nullable = false)
 	private String apellido1;
+	
+	@Column(name = "apellido2", nullable = false)
 	private String apellido2;
+	
+	@Column(name = "lugar_nacimiento", nullable = false)
 	private String lugar_nacimiento;
+	
+	@Column(name = "fecha_nacimiento", nullable = false)
 	private char fecha_nacimiento;
+	
+	@Column(name = "direccion", nullable = false)
 	private String direccion;
+	
+	@Column(name = "telefono", nullable = false)
 	private String telefono;
+	
+	@Column(name = "puesto", nullable = false)
 	private String puesto;
+	
+	@Column(name = "cod_departamento", nullable = false)
 	private int cod_departamento;
 
 	public Empleados() {

@@ -159,3 +159,8 @@ line 1:31: unexpected token: e
 [2021-04-21 19:26:25] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
 [2021-04-21 19:26:30] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1062, SQLState: 23000
 [2021-04-21 19:26:30] [ ERROR] [SqlExceptionHelper:142] Duplicate entry '1' for key 'PRIMARY'
+[2021-04-21 20:02:25] [ WARN ] [deprecation:81] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2021-04-21 20:02:26] [ WARN ] [deprecation:81] HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[2021-04-21 20:02:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 20:52:31] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 20:53:04] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)

@@ -2,10 +2,24 @@ package modelos;
 
 import java.io.Serializable;
 
+import javax.persistence.*;
+
+
+
+@Entity
+@Table(name = "departamento")
 public class Departamentos implements Serializable{
 	
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
+	@Column(name = "codigo")
 	private int codigo;
+	
+	@Column(name = "nombre", nullable = false)
 	private String nombre;
+	
+	@Column(name = "cod_responsable", nullable = false)
 	private int cod_responsable;
 	
 	public Departamentos() {
