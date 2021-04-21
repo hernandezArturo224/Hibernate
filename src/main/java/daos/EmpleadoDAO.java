@@ -3,10 +3,14 @@ package daos;
 import java.util.*;
 import org.hibernate.Transaction;
 
+import log.logs.UsoLogger;
+
+import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import modelos.*;
 
 public class EmpleadoDAO {
+	Logger log = UsoLogger.getLogger(EmpleadoDAO.class);
 	
 	public static List<Empleados> getAllEmployees(Session s) {
 		String hQuery = "from Empleados";
