@@ -164,3 +164,17 @@ line 1:31: unexpected token: e
 [2021-04-21 20:02:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
 [2021-04-21 20:52:31] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
 [2021-04-21 20:53:04] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 21:42:54] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 21:43:07] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-04-21 21:43:07] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-04-21 21:43:45] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 21:43:54] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-04-21 21:43:54] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-04-21 21:44:38] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 21:44:59] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-04-21 21:44:59] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-04-21 23:35:36] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 23:36:29] [ WARN ] [SqlExceptionHelper:137] SQL Error: 1364, SQLState: HY000
+[2021-04-21 23:36:29] [ ERROR] [SqlExceptionHelper:142] Field 'codigo' doesn't have a default value
+[2021-04-21 23:38:07] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-21 23:38:21] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
