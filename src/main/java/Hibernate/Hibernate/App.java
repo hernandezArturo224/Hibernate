@@ -3,6 +3,7 @@ package Hibernate.Hibernate;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 
 import modelos.*;
 import java.util.*;
@@ -32,5 +33,12 @@ public class App
         //List<Empleados> empleados = EmpleadoDAO.getAllEmployees(session);
         
         //System.out.println(empleados.get(0).toString());
+        
+        //Empleados em = EmpleadoDAO.getEmployeeFromId(session, 12);
+        
+        //System.out.println(em.toString());
+        Empleados empl = new Empleados(8,"Arturo","Hernandez","Nuñez","Zamora",'d',"C/Plaza","956321596","JEFAZO",9);
+        //EmpleadoDAO.insertEmployee(empl, session);
+        EmpleadoDAO.deleteEmployee(empl, session);
     }
 }
