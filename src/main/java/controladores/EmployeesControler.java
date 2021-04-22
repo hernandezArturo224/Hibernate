@@ -54,5 +54,9 @@ public class EmployeesControler {
 		}
 		
 	}
+	
+	/*public static List<Empleados> getEmpleadosEdad(int edad){
+		
+	}*/
 
 }
