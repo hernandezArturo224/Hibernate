@@ -1,0 +1,4 @@
+[2021-04-22 12:20:46] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-22 12:27:03] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-22 12:27:26] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2021-04-22 12:27:47] [ WARN ] [pooling:72] HHH10001002: Using Hibernate built-in connection pool (not for production use!)

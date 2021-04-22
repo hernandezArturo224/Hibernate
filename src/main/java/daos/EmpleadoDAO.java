@@ -48,5 +48,16 @@ public class EmpleadoDAO {
         empl.setNombre(nuevoNombre);
         tx.commit();
 	}
+	
+	public static List<Empleados> getEmployeesFromDepartment(int id, Session s){
+		String hQuery = "from Empleados e" + " where e.cod_departamento = :id";
+		List<Empleados> empleados = s.createQuery(hQuery, Empleados.class)
+									.setParameter("id", id)
+									.list();
+		
+		return empleados;
+									
+									
+	}
 
 }

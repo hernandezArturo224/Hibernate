@@ -38,5 +38,18 @@ public class EmployeesControler {
 	public static void updateEmployee(int id,Session s) {
 		EmpleadoDAO.updateNameFromId(id, "Nombre Actualizado", s);
 	}
+	
+	public static void showEmployeesFromDepartment(int id, Session s) {
+		List<Empleados> empl = EmpleadoDAO.getEmployeesFromDepartment(id, s);
+		if(empl.size() <= 0) {
+			log.info("No hay empleados en ese departamento");
+		}else {
+			Iterator<Empleados> it = empl.iterator();
+			while(it.hasNext()) {
+				System.out.println(it.next().toString());
+			}
+		}
+		
+	}
 
 }
