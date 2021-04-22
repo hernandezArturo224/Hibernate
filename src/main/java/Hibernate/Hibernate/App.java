@@ -55,7 +55,10 @@ public class App
         		EmployeesControler.updateEmployee(id3, session);
         	break;
         	case 5:
-        		EmployeesControler.showEmployeesFromDepartment(8, session);
+        		int id4;
+        		System.out.println("Introduce el id del departamento");
+        		id4=scan.nextInt();
+        		EmployeesControler.showEmployeesFromDepartment(id4, session);
         	break;
         	default:
         		log.info("Opcion no contemplada");

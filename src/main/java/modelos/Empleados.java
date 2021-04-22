@@ -1,6 +1,7 @@
 package modelos;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -27,7 +28,7 @@ public class Empleados implements Serializable{
 	private String lugar_nacimiento;
 	
 	@Column(name = "fecha_nacimiento", nullable = false)
-	private char fecha_nacimiento;
+	private Date fecha_nacimiento;
 	
 	@Column(name = "direccion", nullable = false)
 	private String direccion;
@@ -45,7 +46,7 @@ public class Empleados implements Serializable{
 		
 	}
 	
-	public Empleados(int codigo, String nombre,String ap1, String ap2, String LugNacimiento, char fechaNac, String direccion, String telefono, String puesto, int codigoDep) {
+	public Empleados(int codigo, String nombre,String ap1, String ap2, String LugNacimiento, Date fechaNac, String direccion, String telefono, String puesto, int codigoDep) {
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.apellido1 = ap1;
@@ -106,11 +107,11 @@ public class Empleados implements Serializable{
 		this.lugar_nacimiento = lugar_nacimiento;
 	}
 
-	public char getFecha_nacimiento() {
+	public Date getFecha_nacimiento() {
 		return fecha_nacimiento;
 	}
 
-	public void setFecha_nacimiento(char fecha_nacimiento) {
+	public void setFecha_nacimiento(Date fecha_nacimiento) {
 		this.fecha_nacimiento = fecha_nacimiento;
 	}
 
