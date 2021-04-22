@@ -40,21 +40,33 @@ public class App
         		DepartmentsControler.showAllDepartments(session);
         	break;
         	case 2:
+        		boolean seguir=true;
         		int id;
-        		System.out.println("Introduce el id el empleado a insertar");
-        		id=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a insertar");
+            		id=scan.nextInt();
+            		seguir = EmployeesControler.checkEmployee(id, session);
+        		}while(seguir);
         		EmployeesControler.insertEmployee(id, "Alex", "Fernandez", "Gutierrez", "956321825", session);
         	break;
         	case 3:
+        		boolean seguir2 = false;
         		int id2;
-        		System.out.println("Introduce el id el empleado a eliminar");
-        		id2=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a eliminar");
+            		id2=scan.nextInt();
+            		seguir2 = EmployeesControler.checkEmployee(id2, session);
+        		}while(!seguir2);
         		EmployeesControler.deleteEmployee(id2, session);
         	break;
         	case 4:
+        		boolean seguir3=false;
         		int id3;
-        		System.out.println("Introduce el id el empleado a actualizar");
-        		id3=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a actualizar");
+            		id3=scan.nextInt();
+            		seguir3 = EmployeesControler.checkEmployee(id3, session);
+        		}while(!seguir3);
         		EmployeesControler.updateEmployee(id3, session);
         	break;	
         	default:

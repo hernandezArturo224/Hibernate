@@ -17,11 +17,17 @@ public class DepartmentsControler {
 
 	public static void showAllDepartments(Session s) {
 		List<Departamentos> dptm = DepartamentosDAO.getAllDepartments(s);
-		Iterator it = dptm.iterator();
-		while(it.hasNext()) {
-			System.out.println(it.next().toString());
+		
+		if(dptm.size() <= 0) {
+			log.info("No hay departamentos en la BD...");
+		}else {
+			Iterator it = dptm.iterator();
+			while(it.hasNext()) {
+				System.out.println(it.next().toString());
+			}
+			log.info("Generados todos los departamentos...");
 		}
-		log.info("Generados todos los departamentos...");
+		
 	}
 	
 }
