@@ -27,7 +27,7 @@ public class App
         Scanner scan = new Scanner(System.in);
         
         do {
-        	System.out.println("Introduce 0 para ver todos los empleados, 1 para ver todos los departamentos,2 inserta empleado por defecto,3 para eliminar un empleado,4 para actualizar un empleado,5 ver empleados de un departamento,6 para salir");
+        	System.out.println("Introduce 0 para ver todos los empleados, 1 para ver todos los departamentos,2 inserta empleado por defecto,3 para eliminar un empleado,4 para actualizar un empleado,5 ver empleados de un departamento,6 para ver empleados mayores de la edad indicada,7 para salir");
         	opcion = scan.nextInt();
         	switch(opcion) {
         	case 0:
@@ -60,12 +60,19 @@ public class App
         		id4=scan.nextInt();
         		EmployeesControler.showEmployeesFromDepartment(id4, session);
         	break;
+        	case 6:
+        		int id5;
+        		System.out.println("Introduce la edad que quieras buscar");
+        		id5=scan.nextInt();
+        		
+        		EmployeesControler.showEmployeesOlderThan(id5, session);
+        	break;
         	default:
         		log.info("Opcion no contemplada");
         	break;
         	}
         	
-        }while(opcion != 6);
+        }while(opcion != 7);
         
         log.info("Hasta luego");
        

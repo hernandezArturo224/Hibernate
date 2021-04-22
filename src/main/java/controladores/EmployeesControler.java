@@ -8,7 +8,11 @@ import utilidades.*;
 
 import org.hibernate.Transaction;
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
+
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 
 public class EmployeesControler {
 	
@@ -55,8 +59,18 @@ public class EmployeesControler {
 		
 	}
 	
-	/*public static List<Empleados> getEmpleadosEdad(int edad){
-		
-	}*/
+	public static void showEmployeesOlderThan(int age, Session s) {
+		List<Empleados> empleados = EmpleadoDAO.getEmpleadosEdad(age, s);
+		if(empleados.size() <= 0) {
+			log.info("No hay empleados mayores de "+ age +" años");
+		}else {
+			Iterator<Empleados> it = empleados.iterator();
+			while(it.hasNext()) {
+				System.out.println(it.next().toString());
+			}
+		}
+	}
+	
+	
 
 }

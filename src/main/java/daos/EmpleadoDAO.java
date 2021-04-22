@@ -2,12 +2,15 @@ package daos;
 
 import java.util.*;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Restrictions;
 
 import log.logs.UsoLogger;
 
 import org.apache.log4j.Logger;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import modelos.*;
+import utilidades.DateUtilities;
 
 public class EmpleadoDAO {
 	Logger log = UsoLogger.getLogger(EmpleadoDAO.class);
@@ -58,6 +61,14 @@ public class EmpleadoDAO {
 		return empleados;
 									
 									
+	}
+	
+	public static List<Empleados> getEmpleadosEdad(int edad, Session s){
+		Date date = DateUtilities.getAños(edad);
+		Criteria criteria = s.createCriteria(Empleados.class);
+		List<Empleados> resultado = criteria.add(Restrictions.le("fecha_nacimiento",date )).list();
+		
+		return resultado;
 	}
 
 }
