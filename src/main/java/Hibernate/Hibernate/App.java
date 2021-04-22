@@ -25,9 +25,12 @@ public class App
         Session session = HibernateUtil.getSessionFactory().openSession();
         int opcion=0;
         Scanner scan = new Scanner(System.in);
+        String [] opciones = {"0. Ver todos los empleados","1. Ver todos los departamentos","2. Insertar empleado por defecto","3. Elimina empleado","4. Actualizar un empleado","5. Salir"};
+        
         
         do {
-        	System.out.println("Introduce 0 para ver todos los empleados, 1 para ver todos los departamentos,2 inserta empleado por defecto,3 para eliminar un empleado,4 para actualizar un empleado,5 para salir");
+        	Menu menu = new Menu(opciones);
+        	System.out.println(menu.muestraMenu());
         	opcion = scan.nextInt();
         	switch(opcion) {
         	case 0:
@@ -60,7 +63,7 @@ public class App
         	}
         	
         }while(opcion != 5);
-        
+        scan.close();
         log.info("Hasta luego");
        
     }
