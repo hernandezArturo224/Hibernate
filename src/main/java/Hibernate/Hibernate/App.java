@@ -26,8 +26,11 @@ public class App
         int opcion=0;
         Scanner scan = new Scanner(System.in);
         
+        String [] opciones = {"0. Ver todos los empleados","1. Ver todos los departamentos","2. Insertar empleado por defecto","3. Eliminar empleado","4. Actualizar empleado","5. Ver empleados de un departamento","6. Ver empleados mayores de cierta edad","7. Salir"};
+        Menu menu = new Menu(opciones);
+        
         do {
-        	System.out.println("Introduce 0 para ver todos los empleados, 1 para ver todos los departamentos,2 inserta empleado por defecto,3 para eliminar un empleado,4 para actualizar un empleado,5 ver empleados de un departamento,6 para ver empleados mayores de la edad indicada,7 para salir");
+        	System.out.println(menu.muestraMenu());
         	opcion = scan.nextInt();
         	switch(opcion) {
         	case 0:
@@ -37,21 +40,34 @@ public class App
         		DepartmentsControler.showAllDepartments(session);
         	break;
         	case 2:
+        		boolean seguir = true;
         		int id;
-        		System.out.println("Introduce el id el empleado a insertar");
-        		id=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a insertar");
+            		id=scan.nextInt();
+            		seguir = EmployeesControler.checkEmployee(id, session);
+        		}while(seguir);
         		EmployeesControler.insertEmployee(id, "Alex", "Fernandez", "Gutierrez", "956321825", session);
         	break;
         	case 3:
+        		boolean seguir2=false;
         		int id2;
-        		System.out.println("Introduce el id el empleado a eliminar");
-        		id2=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a eliminar");
+            		id2=scan.nextInt();
+            		seguir2=EmployeesControler.checkEmployee(id2, session);
+        		}while(!seguir2);
+        		
         		EmployeesControler.deleteEmployee(id2, session);
         	break;
         	case 4:
+        		boolean seguir3=false;
         		int id3;
-        		System.out.println("Introduce el id el empleado a actualizar");
-        		id3=scan.nextInt();
+        		do {
+        			System.out.println("Introduce el id el empleado a actualizar");
+            		id3=scan.nextInt();
+            		seguir3 = EmployeesControler.checkEmployee(id3, session);
+        		}while(!seguir3);
         		EmployeesControler.updateEmployee(id3, session);
         	break;
         	case 5:

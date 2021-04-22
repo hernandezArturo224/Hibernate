@@ -20,12 +20,28 @@ public class EmployeesControler {
 	
 	public static void showAllEmployees(Session s) {
 		List<Empleados> empl = EmpleadoDAO.getAllEmployees(s);
-		Iterator it = empl.iterator();
-		while(it.hasNext()) {
-			System.out.println(it.next().toString());
+		
+		if(empl.size()<=0) {
+			log.info("No hay empleados en la BD...");
+		}else {
+			Iterator<Empleados> it = empl.iterator();
+			while(it.hasNext()) {
+				System.out.println(it.next().toString());
+			}
+			
+			log.info("Empleados generados...");
 		}
 		
-		log.info("Empleados generados...");
+	}
+	
+	public static boolean checkEmployee(int id, Session s) {
+		Empleados empl = EmpleadoDAO.getEmployeeFromId(s, id);
+		if(empl == null) {
+			return false;
+		}else {
+			log.info("Ya existe el empleado en la base de datos");
+			return true;
+		}
 	}
 	
 	public static void insertEmployee(int codigo, String name, String ap1, String ap2,String telefono,Session s) {
